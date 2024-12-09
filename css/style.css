@@ -1,0 +1,465 @@
+body, 
+html {	    
+    box-sizing: border-box;    
+    font-style: normal;
+    font-weight: normal;
+    /*height: 100%;*/
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'chronicle_displaylight_italic';
+    src: url('../fonts/chronicledisp-lightital-webfont.woff2') format('woff2'),
+         url('../fonts/chronicledisp-lightital-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'chronicle_displaybold_italic';
+    src: url('../fonts/chronicledisp-boldital-webfont.woff2') format('woff2'),
+         url('../fonts/chronicledisp-boldital-webfont.woff') format('woff');
+}
+
+
+
+.clear{
+    clear: both;
+}
+#social {
+    float: right;
+    margin: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 600;
+}
+    #social ul {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+        vertical-align: middle;
+    }
+        #social ul li {
+            display: inline-block;
+            margin: 0 3px;
+            vertical-align: middle;
+        }
+            #social ul li a{
+                height: 36px;
+                width: 36px;
+            }
+                #fb {
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/fb-icon.png?v2) no-repeat 0 0 !important;
+                    background-size: 100% !important;
+                    border: none;
+                    display: inline-block;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+                #wst {
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/wsp-icon.png?v2) no-repeat 0 0 !important;
+                    background-size: 100% !important;
+                    border: none;
+                    display: none;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+                #tw {
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/tw-icon.png?v2) no-repeat 0 0 !important;
+                    background-size: 100% !important;
+                    border: none;
+                    display: inline-block;
+                    height: 36px;
+                    text-indent: -9999px;
+                    width: 36px;
+                }
+.box-main-portada{     
+    height: 150vh;
+    overflow: hidden;
+}
+    .box-main-portada img{
+        position: relative;
+        z-index: 10;
+    }
+    .box-titular{
+        left: 50px;
+        position: fixed;
+        top: 50px;
+        text-align: left;
+    }        
+        .box-titular h1{
+            font: 3.5rem/1 "Noto Serif KR", serif;
+            font-weight: 900;
+            margin: 10px 0;
+            max-width: 410px;
+            text-transform: uppercase;
+        }
+        .box-titular h5{
+            color: #AB8F2F;
+            font: 1.3rem/1.1 "Noto Sans KR", sans-serif;
+            font-weight: 900;
+            margin: 0 auto;
+            text-transform: uppercase;
+        }
+        .box-titular h6{
+            font: 1.8rem/1 "Noto Serif KR", serif;
+            font-weight: 900;
+            margin: 0 auto;
+        }
+                    
+        .enterTitulo{
+            animation: enterTitulo 0s ease-out 0.0s forwards;
+        }
+        @keyframes enterTitulo {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .salirTitulo{
+            animation: salirTitulo 0s ease-out 0.0s forwards;
+        }
+        @keyframes salirTitulo {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+.main{
+
+}
+    .box-bajada{
+        border-top: 8px solid #AB8F2F;
+        padding: 100px 0 200px;
+    }
+        .box-bajada h3{
+            font: 18px/1.5 'chronicle_displaylight_italic';
+            margin: 0 auto;
+            max-width: 450px;
+            text-align: center;
+        }
+            .box-bajada h3 span{
+                color: #AB8F2F;
+                font-family: 'chronicle_displaybold_italic';
+            }
+    .box-parallax{
+
+    }
+        .box-parallax h4{
+            font: 32px/1.2 "Merriweather", serif;
+            margin: 20px auto 60px;
+            max-width: 700px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .section,
+        .section-personaje {
+            height: 100vh;
+            position: relative;
+            width: 100%;
+        }        
+        .block {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;            
+            width: 100%; 
+        }        
+        #block-1 {
+            background-image: url('../img/bg-bloque-1.jpg');
+            opacity: 1; 
+            z-index: 10;
+        }        
+        #block-2 {            
+            position: absolute;
+            opacity: 1;
+            z-index: 20;
+            transform: translateY(100%);
+        }        
+        #block-3 {
+            background-image: url('../img/bg-bloque-2.jpg');
+            z-index: 30;
+        }
+        #block-4 {            
+            position: absolute;
+            opacity: 1;
+            z-index: 40;
+            transform: translateY(100%);
+        }   
+        #block-5{
+            background-image: url('../img/bg-bloque-3.webp');
+            z-index: 50;
+        }        
+        #block-6 {            
+            position: absolute;
+            opacity: 1;
+            z-index: 60;
+            transform: translateY(100%);
+        }  
+        .bloque-texto {
+            background-color: #fff;
+            box-sizing: border-box;
+            max-width: 380px;
+            padding: 30px;
+            position: absolute;
+            right: 20px;   
+            top: 50%;  
+            transform: translate(0,-50%);  
+        }
+            .bloque-texto p{
+                font: 15px/1.5 "Roboto", sans-serif;
+                margin: 0 auto;
+            }
+            .izquierda{
+                left: 20px;
+                right: inherit;
+            }
+    .box-bloque{
+        padding: 80px 0;
+    }   
+        .box-bloque p{
+            font: 15px/1.7 "Roboto", sans-serif;
+            font-weight: 300;
+            margin: 0 auto;
+            max-width: 420px;
+        }
+            p.center{
+                text-align: center;
+            }
+    .box-main-personajes{
+        margin-bottom: 50px;
+    }
+        .box-main-personajes h4{
+            font: 32px / 1.2 "Merriweather", serif;
+            margin: 20px auto 60px;
+            max-width: 500px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .box-personajes ul{
+            list-style: none;
+            margin: 0 auto;
+            max-width: 1024px;
+            padding: 0;
+            text-align: center;
+        }
+            .box-personajes ul li{
+                border: 1px solid #c2c2c2;
+                border-radius: 22px;
+                box-sizing: border-box;
+                cursor: pointer;
+                display: inline-block;
+                margin: 12px;
+                width: 270px;
+                padding: 20px 10px;
+                text-align: center;
+                vertical-align: top;
+            }
+                .box-personajes ul li:hover{
+                    background-color: #FEF8E3;
+                }
+                .box-personajes ul li img{
+                    display: inline-block;
+                    max-width: 70px;
+                    vertical-align: top;
+                }
+                .box-texto-personaje{
+                    display: inline-block;
+                    margin-top: 40px;
+                    vertical-align: top;
+                }
+                    .box-texto-personaje h5{
+                        color: #AB8F2F;
+                        font: 1.1rem/1.1 "Noto Sans KR", sans-serif;
+                        font-weight: 900;
+                        margin: 0 auto;
+                        text-align: left;
+                        text-transform: uppercase;
+                    }
+                    .btn{
+                        background-color: #fff;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 32px;
+                        color: #AB8F2F;
+                        font: 0.7rem/1.1 "Noto Sans KR", sans-serif;
+                        font-weight: 900;
+                        margin: 10px auto;
+                        padding: 10px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+    .box-desarollo-personaje{
+
+    }
+        .main-avatar{
+            border-bottom: 1px solid #c2c2c2;
+            border-top: 1px solid #c2c2c2;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+            .ctn-avatar{                
+                margin: 0 auto;
+                max-width: 500px;
+                padding: 50px 0 20px;
+            }
+                .ctn-avatar img{
+                    display: inline-block;
+                    max-width: 150px;
+                    vertical-align: top;
+                }
+                .ctn-avatar h5{
+                    display: inline-block;
+                    font: 17px / 1.3 "Roboto", sans-serif;
+                    font-weight: 600;
+                    margin: 40px 20px;
+                    max-width: 195px;
+                    text-align: left;
+                    vertical-align: top;                    
+                }
+                    .ctn-avatar h5 span{
+                        color: #AB8F2F;
+                    }
+            .btn-continuar{
+                background-color: #fff;
+                border: 1px solid #c2c2c2;
+                border-radius: 32px;
+                color: #AB8F2F;
+                cursor: pointer;
+                font: 15px/1.2 "Roboto", sans-serif;
+                font-weight: 600;
+                margin: 0 auto;
+                max-width: 120px;
+                padding: 15px;
+                transform: translate(0, 25px);
+                text-align: center;
+                text-transform: uppercase;
+            }
+                .btn-continuar:hover,
+                .btn-volver:hover{
+                    background-color: #AB8F2F;
+                    color: #fff;
+                }
+        .box-presentacion-personaje{
+            margin: 0 auto;
+            max-width: 360px;
+            text-align: center;
+            transform: translate(0, 10%);
+            width: 100%;
+        }
+            .box-texto-presentacion-personaje{
+                background-color: #fff;
+                border: 1px solid #c2c2c2;
+                box-sizing: border-box;
+                margin-bottom: 40px;
+                position: relative;
+            }
+                .box-texto-presentacion-personaje p{
+                    font: 15px/1.5 "Roboto", sans-serif;
+                    font-weight: 400;
+                    margin: 0 auto;
+                    padding: 30px 20px;
+                    text-align: left;
+                }
+                .box-texto-presentacion-personaje::after{
+                    background: url('../img/triangulo.png') no-repeat center top;
+                    background-size: 100%;
+                    bottom: -55px;
+                    content: '';
+                    height: 56px;
+                    left: 0;
+                    position: absolute;
+                    width: 65px;
+                }
+        #block-personaje-1-1{
+            background-image: url('../img/bg-personaje-1-1.jpg');
+            opacity: 1; 
+            z-index: 10;
+        }
+        #block-personaje-1-2{            
+            opacity: 0; 
+            z-index: 20;
+        }
+        #block-personaje-1-3{            
+            opacity: 0; 
+            z-index: 30;
+        }
+            #block-personaje-1-3 video{
+                object-fit: cover;
+            }
+        #block-personaje-1-4{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 40;
+            transform: translateY(100%);
+        }
+        #block-personaje-1-5{
+            background-image: url('../img/bg-personaje-1-5.jpg');
+            opacity: 0; 
+            z-index: 50;
+        }
+        #block-personaje-1-6{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 60;
+            transform: translateY(100%);
+        }
+        .box-historia{
+            background-color: #fff;
+            padding: 80px 0;
+        }
+            .box-historia p{
+                font: 15px/1.7 "Roboto", sans-serif;
+                font-weight: 400;
+                margin: 0 auto 30px;
+                max-width: 420px;
+            }
+        .btn-volver{
+            background-color: #fff;
+            border: 1px solid #c2c2c2;
+            border-radius: 32px;
+            color: #AB8F2F;
+            cursor: pointer;
+            font: 15px / 1.2 "Roboto", sans-serif;
+            font-weight: 600;
+            margin: 30px auto;
+            max-width: 120px;
+            padding: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    .box-footer{
+        padding: 100px 0 60px;
+    }
+        .box-footer img{
+            display: block;
+            margin: 0 auto;
+            max-width: 120px;
+        }
+        .box-footer ul{
+            list-style: none;
+            margin: 40px auto 0;
+            padding: 0;
+            text-align: center;
+        }
+            .box-footer ul li{
+                margin: 0 auto 25px;
+            }
+                .box-footer ul li h6{
+                    font: 14px/1.3 "Roboto", sans-serif;
+                    margin: 0 auto;
+                }
+                    .box-footer ul li h6 span{
+                        display: block;
+                        font-weight: 600;
+                    }
