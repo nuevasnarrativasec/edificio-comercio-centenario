@@ -545,12 +545,22 @@
                     contenedor.scrollIntoView({ behavior: "smooth", block: "start" });
 
                     // Asignar evento de scroll a los nuevos botones .btn-continuar
-                    contenedor.querySelectorAll(".btn-continuar").forEach((btn) => {
+                    /*contenedor.querySelectorAll(".btn-continuar").forEach((btn) => {
                         btn.addEventListener("click", () => {
                             const target = document.querySelector(".box-parallax-interior");
                             if (target) {
                                 target.scrollIntoView({ behavior: "smooth", block: "start" });
                             }
+                        });
+                    });*/
+
+                    contenedor.querySelectorAll(".btn-continuar").forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                            const scrollAmount = 900;
+                            window.scrollBy({
+                                top: scrollAmount,
+                                behavior: "smooth",
+                            });
                         });
                     });
 
