@@ -158,7 +158,7 @@ html {
         .box-parallax h4{
             font: 32px/1.2 "Merriweather", serif;
             margin: 20px auto 60px;
-            max-width: 700px;
+            max-width: 750px;
             text-align: center;
             text-transform: uppercase;
         }
@@ -308,6 +308,10 @@ html {
                         text-align: center;
                         text-transform: uppercase;
                     }
+                    .active-boton{
+                        background-color: #FEF8E3;
+                        pointer-events: none;
+                    }
     .box-desarrollo-personaje{
         display: none;
         opacity: 0;
@@ -405,7 +409,8 @@ html {
             opacity: 0; 
             z-index: 20;
         }
-        #block-personaje-1-3{            
+        #block-personaje-1-3{   
+            background-image: url('../img/bg-personaje-1-5.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -429,6 +434,46 @@ html {
             z-index: 60;
             transform: translateY(100%);
         }
+
+        #block-personaje-2-1{
+            background-image: url('../img/bg-personaje-2-1.jpg?v2');
+            opacity: 1; 
+            z-index: 10;
+        }
+        #block-personaje-2-2{            
+            opacity: 0; 
+            z-index: 20;
+        }
+        #block-personaje-2-3{   
+            background-image: url('../img/bg-personaje-2-3.jpg');         
+            opacity: 0; 
+            z-index: 30;
+        }
+        #block-personaje-2-4{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 40;
+            transform: translateY(100%);
+        }
+        #block-personaje-2-5{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 50;
+            transform: translateY(100%);
+        }
+        #block-personaje-2-6{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 60;
+            transform: translateY(100%);
+        }
+        .box-historia-2 img{
+            display: block;
+            margin: 20px auto 40px;
+            max-width: 400px;
+        }
+
+
         .box-historia{
             background-color: #fff;
             padding: 80px 0;
