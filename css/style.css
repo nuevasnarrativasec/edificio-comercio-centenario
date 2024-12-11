@@ -83,7 +83,7 @@ html {
     position: relative;
 }
     .box-main-portada img{
-        bottom: -10;
+        bottom: -300px;
         position: absolute;
         z-index: 10;
     }
@@ -179,7 +179,7 @@ html {
             width: 100%; 
         }        
         #block-1 {
-            background-image: url('../img/bg-bloque-1.jpg');
+            background-image: url('../img/bg-bloque-1.webp');
             opacity: 1; 
             z-index: 10;
         }        
@@ -188,7 +188,14 @@ html {
             opacity: 1;
             z-index: 20;
             transform: translateY(100%);
-        }        
+        }    
+            #block-2 img{
+                left: 320px;     
+                position: relative;           
+                max-width: 350px;
+                transform: rotate(-10deg);
+                top: 125px;
+            }    
         #block-3 {
             background-image: url('../img/bg-bloque-2.jpg');
             z-index: 30;
@@ -301,8 +308,14 @@ html {
                         text-align: center;
                         text-transform: uppercase;
                     }
-    .box-desarollo-personaje{
-
+    .box-desarrollo-personaje{
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .box-desarrollo-personaje.visible {
+        display: block;
+        opacity: 1;
     }
         .main-avatar{
             border-bottom: 1px solid #c2c2c2;
@@ -465,3 +478,72 @@ html {
                         display: block;
                         font-weight: 600;
                     }
+
+
+@media only screen and (max-width: 640px) {
+
+    .box-main-portada{
+        height: 100vh;
+    }
+        .box-main-portada img{
+            bottom: 0;
+        }
+        .box-titular{
+            left: 0;
+            padding: 0 20px;
+            width: 100%;            
+        }
+            .box-titular h1{
+                font-size: 2.8rem;
+            }
+        .box-bajada h3{
+            font-size: 22px;
+            padding: 0 20px;
+        }
+        .box-parallax h4{
+            font-size: 28px;
+        }
+        .bloque-texto{
+            right: 0;
+        }
+        .izquierda{
+            left: 0;
+        }
+        #block-2 img{
+            display: none;
+        }
+        #block-5{
+            background-position-x: -600px;
+        }
+        .box-bloque p,
+        .box-main-personajes h4,
+        .box-historia p{
+            padding: 0 20px;
+        }
+
+    .box-personajes {
+        overflow-x: auto;   
+        padding-bottom: 10px;      
+        white-space: nowrap; 
+    }
+        .box-personajes ul {
+            display: flex;         
+            gap: 16px;  
+            list-style: none;       
+            margin: 0; 
+            padding: 0;            
+        }
+            .box-personajes li {
+                flex: 0 0 auto;        
+                width: 120px; 
+            }    
+    .ctn-avatar h5{
+        text-align: center;
+    }
+    .box-presentacion-personaje{
+        box-sizing: border-box;
+        padding: 0 20px;   
+    }
+
+
+}

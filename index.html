@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v12">
+    <link rel="stylesheet" href="./css/style.css?v13">
 
     <style>        
         .ads__zocalo,
@@ -82,6 +82,7 @@
                 
             </div>
             <div class="block block-relative" id="block-2">
+                <img src="./img/bg-primera-portada.webp" alt="" width="100%">
                 <div class="bloque-texto">
                     <p>
                         El Comercio comenzó su trayectoria en 1839 en una finca llamada “La Pila”, ubicada en la calle Arzobispo, hoy jirón Junín, cuadra 2. Allí se imprimió su primer ejemplar el 4 de mayo. Poco después, el diario se trasladó a la calle San Pedro, donde se publicaron 686 ediciones, y en 1841 ocupó la histórica “Casa del Pino”, situada en la esquina de los actuales jirones Lampa y Santa Rosa. Este lugar, destacado por un gran pino australiano plantado por el fundador Manuel Amunátegui, fue testigo de importantes etapas hasta su demolición en 1909.
@@ -122,49 +123,49 @@
 
         <div class="box-personajes">
             <ul>
-                <li>
+                <li id="btn-personaje-1">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>pregonero</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-2">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>vendedor <br> de avisos</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-3">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>linotipista</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-4">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>el director</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-5">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>redactor <br> de locales</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-6">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>redactor <br> de especiales</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
-                <li>
+                <li id="btn-personaje-7">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
                         <h5>archivero</h5>
@@ -175,7 +176,9 @@
         </div>
     </div>
 
-    <div class="box-desarrollo-personaje" id="personaje-1">
+    <div id="contenedor-personaje"></div>
+
+    <!--<div class="box-desarrollo-personaje" id="personaje-1">
 
         <div class="main-avatar">
             <div class="ctn-avatar">
@@ -250,7 +253,7 @@
         <div class="btn-volver">volver</div>
         
 
-    </div>
+    </div>-->
 
     <div class="box-footer">
         <img src="./img/logo-comercio.png" alt="" width="100%">
@@ -310,11 +313,10 @@
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/puerto-de-chancay/js/animation.gsap.js"></script>
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/el-metro-interminable-ecpm/js/debug.addIndicators.js"></script>
 
-    <!-- animaciones elementos -->  
+    <!-- animaciones elementos principales -->  
     <script>             
         document.addEventListener('DOMContentLoaded', () => {
             const controller = new ScrollMagic.Controller();
-            const video = document.querySelector("#block-personaje-1-3 video");
 
             // título     
             new ScrollMagic.Scene({
@@ -429,109 +431,256 @@
             )
             .addIndicators({ name: "Block 6 Slide Up" })
             .addTo(controller);  
+        });
+    </script>   
 
+    <!-- carga dinámica de contenedores de personajes -->  
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const contenedor = document.getElementById("contenedor-personaje");
 
-            // Seccion personajes
-            // Pin de la sección personaje 1
-            new ScrollMagic.Scene({
-            triggerElement: ".section-personaje",
-                triggerHook: 0,
-                duration: "600%",
-            })
-            .setPin(".section-personaje")
-            .addIndicators({ name: "Section personaje pin" }) 
-            .addTo(controller);
+            // Definir el contenido para cada personaje
+            const personajes = {
+                "btn-personaje-1": `
+                    <div class="main-avatar">
+                        <div class="ctn-avatar">
+                            <img src="./img/avatar-pregonero.png" alt="" width="100%">
+                            <h5>Has elegido al <span>pregonero</span> de noticias y la entrada de El Comercio</h5>
+                        </div>
+                        <div class="btn-continuar">continuar</div>
+                    </div>
 
-            // Personaje 1 - Fade-in
-            new ScrollMagic.Scene({
+                    <div class="box-parallax box-parallax-interior">
+
+                        <div class="section-personaje">
+
+                            <div class="block" id="block-personaje-1-1">
+                            
+                            </div>
+
+                            <div class="block" id="block-personaje-1-2">
+                                <div class="box-presentacion-personaje">
+                                    <div class="box-texto-presentacion-personaje">
+                                        <p>Yo soy el que anuncia las primicias desde el balcón. Aunque es el redactor quien elabora las noticias, las circunstancias me llevan a cumplir con nuestro público que se acerca al nuevo edificio y quiere saber qué sucedió y cómo se dieron los hechos. <b>Con mi cable en mano me paro frente a todos ellos y les “recito” los pormenores de la noticia. ¡Soy el pregonero, a mucha honra!</b></p>
+                                    </div>
+                                    <div class="btn-escuchar"></div>
+                                    <img src="./img/personaje-1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-1-3">
+                                <video width="100%" height="100%" playsinline muted>
+                                    <source src="./video/video-personaje-1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="block" id="block-personaje-1-4">
+                                <div class="bloque-texto">
+                                    <p>
+                                        La casona de El Comercio impresiona desde el exterior con su rotonda coronada por una cúpula de 22 metros y una reja decorada con el dios Mercurio, símbolo del comercio y la elocuencia, que custodia el logotipo gótico del diario.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-1-5">
+                                
+                            </div>
+
+                            <div class="block" id="block-personaje-1-6">
+                                <div class="bloque-texto izquierda">
+                                    <p>
+                                        Al ingresar, destacan las farolas de cristal, el mármol reluciente del patio y un ascensor, detalles decorativos importados de Bélgica. Desde el balcón, un pregonero anuncia noticias importantes al público, acompañado por la emblemática sirena de la cúpula, utilizada para destacar ediciones especiales o transmitir grandes acontecimientos. La esquina de la casona, llena de movimiento, vibra con la lectura de cables informativos cada dos minutos, creando una atmósfera de inmediatez y conexión con los sucesos extraordinarios.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="box-historia">
+                        <p>
+                            El lujoso hall se abre a todos. Centenares de personas pugnan por entrar y si no lo logran se quedan frente a la puerta principal. Todos quieren vivir esos sucesos "en directo", ocupando no solo el hall sino también las escaleras de mármol. Hay tanta gente que en la calle, frente a la reja de fierro y bronce, bloquean la esquina y ningún tranvía puede circular. A ellos se les informa con una pizarra grande.
+                        </p>
+                        <p>
+                            El 23 de setiembre de 1926, una pelea de boxeo por el título mundial de los pesos pesados entre Genne Tunney y Jack Dempsey arma una tremenda expectativa, lo que lleva a El Comercio a crear un “sistema por alarmas” para que Lima pudiera estar al tanto de los resultados. Igual, la gente se arremolinó en el hall y en el frente del diario. Igual ocurrió en la revancha, un año después.
+                        </p>
+                        <p>
+                            Lo mismo ocurrirá con las transmisiones de fútbol de las Olimpiadas de Ámsterdam en 1928, y los partidos de la selección peruana con Argentina en 1929, y las del Mundial de Uruguay en 1930. Y, por supuesto, con los partidos de Perú en las Olimpiadas de Berlín en 1936. Si este edificio hablara, sería un cronista más de Lima. 
+                        </p>
+                    </div>
+
+                    <img src="./img/bg-personaje-1-6.jpg" alt="" width="100%">
+
+                    <div class="btn-volver">volver</div>                   
+
+                `,
+                "btn-personaje-2": `
+                <div class="box-desarrollo-personaje">
+                    <h3>Personaje 2</h3>
+                    <p>Contenido del Personaje 2.</p>
+                </div>
+                `,
+                "btn-personaje-3": `
+                <div class="box-desarrollo-personaje">
+                    <h3>Personaje 3</h3>
+                    <p>Contenido del Personaje 3.</p>
+                </div>
+                `,
+            };
+            
+            document.querySelectorAll("ul li[id^='btn-personaje-']").forEach((boton) => {
+                boton.addEventListener("click", () => {
+                    // Limpiar el contenedor antes de cargar nuevo contenido
+                    contenedor.innerHTML = "";
+
+                    // Insertar el contenido correspondiente
+                    contenedor.innerHTML = personajes[boton.id];
+
+                    // Re-inicializar ScrollMagic si es necesario
+                    initScrollMagicForContent();
+
+                    // Scroll suave hacia el contenedor-personaje
+                    contenedor.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                    // Asignar evento de scroll a los nuevos botones .btn-continuar
+                    contenedor.querySelectorAll(".btn-continuar").forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                            const target = document.querySelector(".box-parallax-interior");
+                            if (target) {
+                                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                        });
+                    });
+
+                    // Asignar evento de scroll a los nuevos botones .btn-volver
+                    contenedor.querySelectorAll(".btn-volver").forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                            const targetIntro = document.querySelector(".box-main-personajes");
+                            if (targetIntro) {
+                                targetIntro.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                        });
+                    });
+                });
+            });
+
+            // Función para inicializar ScrollMagic si hay elementos que lo necesiten
+            function initScrollMagicForContent() {
+                // Destruir escenas anteriores si existen
+                if (window.scrollMagicController) {
+                    window.scrollMagicController.destroy(true);
+                }
+
+                // Crear nuevo controlador de ScrollMagic
+                window.scrollMagicController = new ScrollMagic.Controller();
+
+                const controller = new ScrollMagic.Controller();
+                const video = document.querySelector("#block-personaje-1-3 video"); 
+
+                // Seccion personajes
+
+                // Animaciones del personaje 1
+
+                // Pin de la sección personaje 1
+                new ScrollMagic.Scene({
                 triggerElement: ".section-personaje",
-                triggerHook: 0,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-personaje-1-2", { opacity: 1, duration: 1 })
-            )
-            .addIndicators({ name: "block-personaje-1-2 Fade-In" })
-            .addTo(controller);
-
-            // Bloque 3 de personaje 1
-            new ScrollMagic.Scene({
-                triggerElement: ".section-personaje",
-                triggerHook: 0,
-                offset: window.innerHeight,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-personaje-1-3", { opacity: 1, duration: 1 })
-            )
-            .on("enter", () => {
-                video.play();
-            })
-            .on("leave", () => {
-                video.play();
-                /*video.pause();
-                video.currentTime = 0; */
-            })
-            .addIndicators({ name: "block-personaje-1-3 Fade-In" })
-            .addTo(controller);
-
-            // Bloque 4 de personaje 1
-            new ScrollMagic.Scene({
-                triggerElement: ".section-personaje",
-                triggerHook: 0,
-                offset: window.innerHeight * 3,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-personaje-1-4", {
-                    opacity: 1,
-                    y: "-100%", // Sube hacia arriba
-                    duration: 1,
+                    triggerHook: 0,
+                    duration: "600%",
                 })
-            )
-            .addIndicators({ name: "block-personaje-1-4 Fade-In" })
-            .addTo(controller);
+                .setPin(".section-personaje")
+                .addIndicators({ name: "Section personaje pin" }) 
+                .addTo(controller);
 
-            // Bloque 5 de personaje 1
-            new ScrollMagic.Scene({
-                triggerElement: ".section-personaje",
-                triggerHook: 0,
-                offset: window.innerHeight * 4,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-personaje-1-5", { opacity: 1, duration: 1 })
-            )
-            .addIndicators({ name: "block-personaje-1-5 Fade-In" })
-            .addTo(controller);
-
-            // Bloque 6 de personaje 1
-            new ScrollMagic.Scene({
-                triggerElement: ".section-personaje",
-                triggerHook: 0,
-                offset: window.innerHeight * 5,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-personaje-1-6", {
-                    opacity: 1,
-                    y: "-100%", // Sube hacia arriba
-                    duration: 1,
+                // Personaje 1 - Fade-in
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    duration: window.innerHeight,
                 })
-            )
-            .addIndicators({ name: "block-personaje-1-6 Slide Up" })
-            .addTo(controller);  
+                .setTween(
+                    gsap.to("#block-personaje-1-2", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-1-2 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 3 de personaje 1
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-1-3", { opacity: 1, duration: 1 })
+                )
+                .on("enter", () => {
+                    video.play();
+                })
+                .on("leave", () => {
+                    video.play();
+                    /*video.pause();
+                    video.currentTime = 0; */
+                })
+                .addIndicators({ name: "block-personaje-1-3 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 4 de personaje 1
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 3,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-1-4", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-1-4 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 5 de personaje 1
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 4,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-1-5", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-1-5 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 6 de personaje 1
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 5,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-1-6", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-1-6 Slide Up" })
+                .addTo(controller);  
+                }
+
+                // Fin animaciones del personaje 1
+
+                // Animaciones del personaje 2
 
         });
-    </script> 
 
-
-<script>
-   
-
-</script>
-
-
+    </script>
 
 </body>
 </html>
