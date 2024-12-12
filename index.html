@@ -1082,7 +1082,12 @@
                         document.querySelector("#block-personaje-1-2").classList.remove("ocultar-personaje");
                     })
                     .on("leave", () => {
-                        document.querySelector("#block-personaje-1-2").classList.add("ocultar-personaje");
+                        document.querySelector("#block-personaje-1-2").classList.add("ocultar-personaje");                      
+                        document.querySelectorAll("audio").forEach((audio) => {
+                            if (!audio.paused) {
+                                audio.pause();
+                            }
+                        });
                     })
                     .addIndicators({ name: "block-personaje-1-2 Fade-In" })
                     .addTo(controller);
