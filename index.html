@@ -791,6 +791,73 @@
 
                     <div class="btn-volver">volver</div> 
                 `,
+                "btn-personaje-6": `
+                    <div class="main-avatar">
+                        <div class="ctn-avatar">
+                            <img src="./img/avatar-pregonero.png" alt="" width="100%">
+                            <h5>Has elegido al <span>redactor de especiales</span> y estás en la hemeroteca de El Comercio</h5>
+                        </div>
+                        <div class="btn-continuar">continuar</div>
+                    </div>
+
+                    <div class="box-parallax box-parallax-interior">
+                        <div class="section-personaje">
+
+                            <div class="block" id="block-personaje-6-1">
+                            
+                            </div>
+
+                            <div class="block" id="block-personaje-6-2">
+                                <div class="box-presentacion-personaje">
+                                    <div class="box-texto-presentacion-personaje">
+                                        <p>Soy un redactor de notas especiales, un cronista y a la vez un coordinar con todas las áreas creativas y técnicas ubicadas ahora en la sede del nuevo local de El Comercio. Me entusiasma estar en este palacio o casona hecha para elaborar las noticias esperadas por miles de lectores. <b>Nuestra redacción es multiusos, a veces, en momentos especiales, pasa de ser el centro de la noticia a ser un animado salón de actos.</b></p>
+                                    </div>
+                                    <div class="btn-escuchar"></div>
+                                    <img src="./img/personaje-1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-6-3">
+                                
+                            </div>
+
+                            <div class="block" id="block-personaje-6-4">
+                                <div class="bloque-texto">
+                                    <p>
+                                        La sala de redacción es amplia, y en su estreno oficial, a fines de 1924, solo doce periodistas la ocupan, algunos, muy pocos, con máquinas de escribir, la mayoría con pluma y tinta aún. Quizás por eso se le da otro uso: el de salón de actos o reuniones o de festejos.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-6-5">
+                                <div class="bloque-texto izquierda">
+                                    <p>
+                                        En esa suntuosa sala de redacción, con un altillo a un extremo donde se solían colocar los músicos que interpretaron diez piezas musicales para los invitados, se sirvió un exquisito menú a la prensa extranjera. ¿En qué consistía? Era pura comida francesa, habitual en los grandes momentos de esos tiempos. Como ejemplo tenemos canapés suizos, lenguado a la Menier, huevos benedictinos escalfados, pato a la naranja, corazones de alcachofa, pechuga de pavo a la Perigord (salsa de verduras) y ensalada ‘Favorita’; después los invitados disfrutaron de postres clásicos de la época, como tarta Parisienne, con almendras y yemas; café, cócteles, champán, licores y puros.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="box-historia box-historia-6">
+                        <p>
+                           El 9 de diciembre de 1924, El Comercio informó sobre los desvíos vehiculares en el centro de Lima debido a las ceremonias oficiales por el centenario de la batalla de Ayacucho. Para esta ocasión histórica, la redacción del diario se volcó en la creación de una edición especial de 100 páginas, con artículos que abarcaban desde análisis históricos hasta reflexiones sociales y políticas, escritos por destacados autores nacionales y extranjeros.
+                        </p>
+                        <img src="./img/bg-historia-6-1.jpg" alt="" width="100%">                        
+                        <p>
+                            Esta edición destacó por su impecable trabajo gráfico, incluyendo más de 400 grabados, saludos de embajadores y una galería de los presidentes y jefes de Estado del Perú. Además, presentó monografías de Junín y Ayacucho, regiones clave en la independencia. La portada, una “artística tricromía”, mostraba al mariscal Antonio José de Sucre junto a su arenga a las tropas: “¡Soldados!, de los esfuerzos de hoy pende la suerte de la América del Sur”.
+                        </p>
+                        <p>
+                            El 16 de diciembre de ese año, El Comercio organizó un elegante almuerzo en su Salón de Actos para la prensa extranjera, que había llegado a Lima para los festejos del centenario. Este evento reflejó la influencia del diario como anfitrión de la conmemoración, reforzando su rol en el escenario nacional e internacional.
+                        </p>
+                        <p>
+                            Once años después, el Salón de Actos volvió a ser escenario de un momento histórico, aunque trágico. El 15 de mayo de 1935, se velaron allí los restos del director Antonio Miró Quesada de la Guerra y su esposa, María Laos,  ambos asesinados cerca del Club Nacional por un miembro del partido aprista. Su velorio causó dolor en la redacción, pero a la vez creó un sentido de pertenencia muy fuerte. 
+                        </p>    
+                    </div>
+
+                    <div class="btn-volver">volver</div> 
+                `,
             };
             
             let contenidoActual = null; // Variable para almacenar el id del contenido actual
@@ -832,6 +899,10 @@
                         initScrollMagicForPersonaje4();
                     } else if (boton.id === "btn-personaje-5") {
                         initScrollMagicForPersonaje5();
+                    } else if (boton.id === "btn-personaje-6") {
+                        initScrollMagicForPersonaje6();
+                    } else if (boton.id === "btn-personaje-7") {
+                        initScrollMagicForPersonaje7();
                     }    
                     // Scroll suave hacia el contenedor-personaje
                     contenedor.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1302,8 +1373,85 @@
                 )
                 .addIndicators({ name: "block-personaje-5-6 Fade-In" })
                 .addTo(controller);
+            }  
+            
+            // Funciones ScrollMagic para el Personaje 6
+            function initScrollMagicForPersonaje6() {
+                destroyScrollMagic();   
+                
+                window.scrollMagicController = new ScrollMagic.Controller();
+                const controller = window.scrollMagicController;
 
-            }   
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: "500%",
+                    })
+                    .setPin(".section-personaje")
+                    .addIndicators({ name: "Section personaje pin" }) 
+                    .addTo(controller);
+                
+                // Personaje 6 - Fade-in
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-6-2", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-6-2 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 3 de personaje 6
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        offset: window.innerHeight,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-6-3", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-6-3 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 4 de personaje 6
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 3,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-6-4", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-6-4 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 5 de personaje 6
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 4,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-6-5", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-6-5 Fade-In" })
+                .addTo(controller);
+            }
+
+            // Funciones ScrollMagic para el Personaje 7
 
         });
 
