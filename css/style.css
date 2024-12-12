@@ -759,5 +759,11 @@ html {
         padding: 0 20px;   
     }
 
+    .box-main-portada video{
+        left: -50%;
+        object-position: bottom;
+        position: relative;
+        width: 200%;
+    }
 
 }
