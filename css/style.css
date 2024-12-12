@@ -473,6 +473,73 @@ html {
             max-width: 400px;
         }
 
+        #block-personaje-3-1{
+            background-image: url('../img/bg-personaje-3-1.jpg?v2');
+            opacity: 1; 
+            z-index: 10;
+        }
+        #block-personaje-3-2{            
+            opacity: 0; 
+            z-index: 20;
+        }
+        #block-personaje-3-3{   
+            background-image: url('../img/bg-personaje-3-3.jpg');         
+            opacity: 0; 
+            z-index: 30;
+        }
+        #block-personaje-3-4{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 40;
+            transform: translateY(100%);
+        }
+        #block-personaje-3-5{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 50;
+            transform: translateY(100%);
+        }
+
+        #block-personaje-4-1{
+            background-image: url('../img/bg-personaje-4-1.jpg?v2');
+            opacity: 1; 
+            z-index: 10;
+        }
+        #block-personaje-4-2{            
+            opacity: 0; 
+            z-index: 20;
+        }
+        #block-personaje-4-3{   
+            background-image: url('../img/bg-personaje-4-3.jpg');         
+            opacity: 0; 
+            z-index: 30;
+        }
+        #block-personaje-4-4{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 40;
+            transform: translateY(100%);
+        }
+        #block-personaje-4-5{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 50;
+            transform: translateY(100%);
+        }
+        .box-historia-4 img{
+            display: block;
+            margin: 20px auto 5px;
+            max-width: 500px;
+        }
+        .box-historia-4 span{
+            color: #5A5A5A;
+            display: block;
+            font: 14px/1.4 "Roboto", sans-serif;
+            font-weight: 300;
+            margin: 10px auto 40px;
+            max-width: 500px;
+        }
+
 
         .box-historia{
             background-color: #fff;
