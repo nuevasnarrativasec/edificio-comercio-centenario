@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v15">
+    <link rel="stylesheet" href="./css/style.css?v16">
 
     <style>        
         .ads__zocalo,
@@ -719,6 +719,78 @@
 
                     <div class="btn-volver">volver</div>  
                 `,
+                "btn-personaje-5": `
+                    <div class="main-avatar">
+                        <div class="ctn-avatar">
+                            <img src="./img/avatar-pregonero.png" alt="" width="100%">
+                            <h5>Has elegido al <span>redactor de locales</span> y estás en la readacción de El Comercio</h5>
+                        </div>
+                        <div class="btn-continuar">continuar</div>
+                    </div>
+
+                    <div class="box-parallax box-parallax-interior">
+                        <div class="section-personaje">
+
+                            <div class="block" id="block-personaje-5-1">
+                            
+                            </div>
+
+                            <div class="block" id="block-personaje-5-2">
+                                <div class="box-presentacion-personaje">
+                                    <div class="box-texto-presentacion-personaje">
+                                        <p>Yo soy el que redacta las notas de la vida cotidiana. Mi especialidad es la información local. El 16 de diciembre de 1924, en un almuerzo con la prensa extranjera, fui testigo del anuncio de la inauguración del nuevo edificio. <b>Conocí la redacción que se ubicaría en el segundo piso y donde nos quedamos durante muchos años.</b></p>
+                                    </div>
+                                    <div class="btn-escuchar"></div>
+                                    <img src="./img/personaje-1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-5-3">
+                                
+                            </div>
+
+                            <div class="block" id="block-personaje-5-4">
+                                <div class="bloque-texto">
+                                    <p>
+                                        Los procesos periodísticos de El Comercio destacaban por su rigor y compromiso con la verdad. Los redactores iniciaban como “colectores de datos”, recorriendo comisarías y la morgue para obtener información que, tras varias etapas, se transformaba en noticias bajo la supervisión del “cronista de guardia”, formando a generaciones de periodistas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-5-5">
+                                <div class="bloque-texto izquierda">
+                                    <p>
+                                        La década trajo una transición tecnológica: aunque aún se usaban plumas y tinteros, las máquinas de escribir comenzaron a ser esenciales hacia finales de los años 30. El diario amplió su cobertura con secciones de política, economía, deportes y cultura, consolidándose como un referente informativo en el Perú.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-5-6">
+                                <div class="bloque-texto">
+                                    <p>
+                                        La redacción combinaba avances tecnológicos con un enfoque editorial sólido. A pesar del calor y ruido de la imprenta, el equipo trabajaba incansablemente, marcando una época dorada del periodismo y sentando las bases para el futuro.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>    
+
+                    <div class="box-historia box-historia-5">
+                        <p>
+                           En los años 20, la redacción de El Comercio era un espacio dinámico, impulsado por avances tecnológicos y una infraestructura en constante desarrollo. Desde mayo de 1921, el diario contó con un servicio cablegráfico de Associated Press (AP), que conectaba a Lima con Nueva York y Sudamérica, asegurando un flujo constante de noticias internacionales. Este sistema se complementa con los teletipos, que entregaban noticias las 24 horas del día en rollos de papel.
+                        </p>
+                        <img src="./img/bg-historia-5-1.jpg" alt="" width="100%">                        
+                        <p>
+                            En términos de producción, el diario evolucionó con la incorporación de modernas rotativas. En 1926 adquirió una máquina R. Hoe & Cía, de Nueva York, capaz de generar 48 páginas por edición. Más tarde, se sumó una prensa rotativa "Super Speed" multicolor, con capacidad para imprimir 64 páginas, permitiendo al diario alcanzar tirajes de hasta 80 mil ejemplares por hora. La redacción, aunque vibrante, soportaba el calor y ruido generados por las máquinas de impresión ubicadas justo debajo, especialmente durante las noches.
+                        </p>
+                        <p>
+                            La distribución del contenido también se modernizó. A partir del 9 de mayo de 1926, el diario se imprimió en bloques de 10 páginas, organizando noticias locales, nacionales e internacionales junto a notas comerciales y deportivas. Además, el 1 de mayo de 1927 se introdujo la sección de “moda y elegancia”, reflejando los cambios culturales de la época.
+                        </p>
+                    </div>
+
+                    <div class="btn-volver">volver</div> 
+                `,
             };
             
             let contenidoActual = null; // Variable para almacenar el id del contenido actual
@@ -758,7 +830,9 @@
                         initScrollMagicForPersonaje3();
                     } else if (boton.id === "btn-personaje-4") {
                         initScrollMagicForPersonaje4();
-                    }   
+                    } else if (boton.id === "btn-personaje-5") {
+                        initScrollMagicForPersonaje5();
+                    }    
                     // Scroll suave hacia el contenedor-personaje
                     contenedor.scrollIntoView({ behavior: "smooth", block: "start" });
 
@@ -1135,9 +1209,101 @@
                     )
                     .addIndicators({ name: "block-personaje-4-5 Fade-In" })
                     .addTo(controller);
-
             }
 
+            // Funciones ScrollMagic para el Personaje 5
+            function initScrollMagicForPersonaje5() {
+                destroyScrollMagic();   
+            
+                window.scrollMagicController = new ScrollMagic.Controller();
+                const controller = window.scrollMagicController;
+
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: "600%",
+                    })
+                    .setPin(".section-personaje")
+                    .addIndicators({ name: "Section personaje pin" }) 
+                    .addTo(controller);
+
+                // Personaje 5 - Fade-in
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-5-2", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-5-2 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 3 de personaje 5
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        offset: window.innerHeight,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-5-3", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-5-3 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 4 de personaje 5
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 3,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-5-4", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-5-4 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 5 de personaje 5
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 4,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-5-5", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-5-5 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 6 de personaje 5
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 5,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-5-6", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-5-6 Fade-In" })
+                .addTo(controller);
+
+            }   
 
         });
 
