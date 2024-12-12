@@ -858,6 +858,64 @@
 
                     <div class="btn-volver">volver</div> 
                 `,
+                "btn-personaje-7": `
+                    <div class="main-avatar">
+                        <div class="ctn-avatar">
+                            <img src="./img/avatar-pregonero.png" alt="" width="100%">
+                            <h5>Has elegido al <span>redactor de especiales</span> y estás en la hemeroteca de El Comercio</h5>
+                        </div>
+                        <div class="btn-continuar">continuar</div>
+                    </div>
+
+                    <div class="box-parallax box-parallax-interior">
+                        <div class="section-personaje">
+
+                            <div class="block" id="block-personaje-7-1">
+                            
+                            </div>
+
+                            <div class="block" id="block-personaje-7-2">
+                                <div class="box-presentacion-personaje">
+                                    <div class="box-texto-presentacion-personaje">
+                                        <p>Yo soy un hombre de archivo. Mi mundo son los folios y recortes, son las fotografías, en papel y en película, color o blanco y negro. <b>Les hablo desde la hemeroteca, un recinto que custodia la historia guardada en cada tomo, en cada periódico cuidado celosamente en estos estantes de madera.</b></p>
+                                    </div>
+                                    <div class="btn-escuchar"></div>
+                                    <img src="./img/personaje-1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="block" id="block-personaje-7-3">
+                                
+                            </div>
+
+                            <div class="block" id="block-personaje-7-4">
+                                <div class="bloque-texto">
+                                    <p>
+                                        La Biblioteca de El Comercio (hoy hemeroteca) reúne en sus anaqueles de cedro de Nicaragua las ediciones empastadas de esta casa editora desde el 4 de mayo de 1839. Este espacio se fue armando desde fines del siglo XIX, luego de la guerra con Chile (1879-1883). Hacia 1900, no solo la Biblioteca sino también el archivo de recortes periodísticos junto a sus clichés (fotos en planchas de plomo) estaban ya organizados.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="box-historia box-historia-7">
+                        <p>
+                           El principal tesoro de la hemeroteca es la primera edición de El Comercio, publicada el 4 de mayo de 1839, con dos páginas a tres columnas y el lema Orden, Libertad y Saber. Entre las ediciones memorables figuran la del 29 de mayo de 1839, que incluyó el primer poema del diario, Qué guapo chico, de Felipe Pardo y Aliaga, y la de 1853, que inició la publicación por capítulos de La Cabaña del Tío Tom, de Harriet Beecher Stowe, un alegato contra la esclavitud.
+                        </p>
+                        <img src="./img/bg-historia-7-1.jpg" alt="" width="100%">                        
+                        <p>
+                            En los anaqueles reposan también ejemplares de El Almanaque, enciclopedia publicada entre 1891 y 1929, que ofrecía a los lectores un panorama de la vida social, política y económica del Perú, junto a novelas cortas y tiras cómicas. El primer jefe de archivo y hemeroteca conocido fue Joaquín Miró Quesada Laos, mencionado en la edición del centenario del diario, el 4 de mayo de 1939.
+                        </p> 
+                        <img src="./img/bg-historia-7-2.jpg" alt="" width="100%"> 
+                    </div>
+
+                    <div class="btn-volver">volver</div> 
+
+
+
+                `,
             };
             
             let contenidoActual = null; // Variable para almacenar el id del contenido actual
@@ -1452,7 +1510,66 @@
             }
 
             // Funciones ScrollMagic para el Personaje 7
+            function initScrollMagicForPersonaje7() {
+                destroyScrollMagic();   
 
+                window.scrollMagicController = new ScrollMagic.Controller();
+                const controller = window.scrollMagicController;
+
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: "400%",
+                    })
+                    .setPin(".section-personaje")
+                    .addIndicators({ name: "Section personaje pin" }) 
+                    .addTo(controller);
+                
+                // Personaje 7 - Fade-in
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-7-2", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-7-2 Fade-In" })
+                .addTo(controller);
+
+
+                // Bloque 3 de personaje 7
+                new ScrollMagic.Scene({
+                        triggerElement: ".section-personaje",
+                        triggerHook: 0,
+                        offset: window.innerHeight,
+                        duration: window.innerHeight,
+                })
+                .setTween(
+                    gsap.to("#block-personaje-7-3", { opacity: 1, duration: 1 })
+                )
+                .addIndicators({ name: "block-personaje-7-3 Fade-In" })
+                .addTo(controller);
+
+                // Bloque 4 de personaje 7
+                new ScrollMagic.Scene({
+                    triggerElement: ".section-personaje",
+                    triggerHook: 0,
+                    offset: window.innerHeight * 3,
+                    duration: window.innerHeight,
+                })
+                .setTween(
+                     gsap.to("#block-personaje-7-4", {
+                        opacity: 1,
+                        y: "-100%", // Sube hacia arriba
+                        duration: 1,
+                    })
+                )
+                .addIndicators({ name: "block-personaje-7-4 Fade-In" })
+                .addTo(controller);
+            
+
+            }
         });
 
     </script>
