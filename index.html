@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v18">
+    <link rel="stylesheet" href="./css/style.css?v19">
 
     <style>        
         .ads__zocalo,
@@ -157,7 +157,7 @@
                 <li id="btn-personaje-5">
                     <img src="./img/personaje-1.png" alt="" width="100%">
                     <div class="box-texto-personaje">
-                        <h5>redactor <br> de locales</h5>
+                        <h5>redactora <br> de locales</h5>
                         <div class="btn">seleccionar</div>
                     </div>
                 </li>
@@ -467,7 +467,18 @@
                                     <div class="box-texto-presentacion-personaje">
                                         <p>Yo soy el que anuncia las primicias desde el balcón. Aunque es el redactor quien elabora las noticias, las circunstancias me llevan a cumplir con nuestro público que se acerca al nuevo edificio y quiere saber qué sucedió y cómo se dieron los hechos. <b>Con mi cable en mano me paro frente a todos ellos y les “recito” los pormenores de la noticia. ¡Soy el pregonero, a mucha honra!</b></p>
                                     </div>
-                                    <div class="btn-escuchar"></div>
+                                    <div id="audio-button" class="audio-button">
+                                        <span class="icon"><img src="./img/icon-sonido.png" width="100%"></span>
+                                        <span class="text">Escuchar</span>
+                                    </div>
+                                    <div id="custom-audio-controls" class="custom-controls" style="display: none;">
+                                        <button id="play-pause-btn">
+                                            <img id="play-pause-img" src="./img/icon-play.jpg" alt="Play" width="100%" />
+                                        </button>
+                                        <input type="range" id="seek-bar" value="0">
+                                        <span id="time-display">0:00</span>
+                                    </div>
+                                    <audio id="audio-player" src="./audio/audio-pregonero-2.mp3" controls style="display: none;"></audio>
                                     <img src="./img/personaje-1.png" alt="">
                                 </div>
                             </div>
@@ -726,7 +737,7 @@
                     <div class="main-avatar">
                         <div class="ctn-avatar">
                             <img src="./img/avatar-pregonero.png" alt="" width="100%">
-                            <h5>Has elegido al <span>redactor de locales</span> y estás en la readacción de El Comercio</h5>
+                            <h5>Has elegido al <span>redactora de locales</span> y estás en la readacción de El Comercio</h5>
                         </div>
                         <div class="btn-continuar">continuar</div>
                     </div>
@@ -741,7 +752,7 @@
                             <div class="block" id="block-personaje-5-2">
                                 <div class="box-presentacion-personaje">
                                     <div class="box-texto-presentacion-personaje">
-                                        <p>Yo soy el que redacta las notas de la vida cotidiana. Mi especialidad es la información local. El 16 de diciembre de 1924, en un almuerzo con la prensa extranjera, fui testigo del anuncio de la inauguración del nuevo edificio. <b>Conocí la redacción que se ubicaría en el segundo piso y donde nos quedamos durante muchos años.</b></p>
+                                        <p>Yo soy la que redacta las notas de la vida cotidiana. Mi especialidad es la información local. El 16 de diciembre de 1924, en un almuerzo con la prensa extranjera, fui testigo del anuncio de la inauguración del nuevo edificio. <b>Conocí la redacción que se ubicaría en el segundo piso y donde nos quedamos durante muchos años.</b></p>
                                     </div>
                                     <div class="btn-escuchar"></div>
                                     <img src="./img/personaje-1.png" alt="">
@@ -935,12 +946,12 @@
 
                     // Remover la clase 'active' y habilitar los botones anteriores
                     document.querySelectorAll("ul li[id^='btn-personaje-']").forEach((btn) => {
-                        btn.classList.remove("active");
+                        btn.classList.remove("active-boton");
                         btn.style.pointerEvents = "auto";
                     });
 
                     // Añadir clase 'active' al botón actual y deshabilitarlo
-                    boton.classList.add("active");
+                    boton.classList.add("active-boton");
                     boton.style.pointerEvents = "none";
 
                     // Limpiar el contenedor antes de cargar nuevo contenido
@@ -978,6 +989,48 @@
                             });
                         });
                     });
+
+                    const audioButton = document.getElementById("audio-button");
+                    const audioPlayer = document.getElementById("audio-player");
+                    const customControls = document.getElementById("custom-audio-controls");
+                    const playPauseBtn = document.getElementById("play-pause-btn");
+                    const playPauseImg = document.getElementById("play-pause-img");
+                    const seekBar = document.getElementById("seek-bar");
+                    const timeDisplay = document.getElementById("time-display");
+
+                    audioButton.addEventListener("click", () => {
+                        audioButton.style.display = "none";
+                        customControls.style.display = "flex";
+                        audioPlayer.play();
+                    });
+
+                    playPauseBtn.addEventListener("click", () => {
+                        if (audioPlayer.paused) {
+                            audioPlayer.play();
+                            playPauseImg.src = "./img/icon-pause.jpg?v2";
+                            playPauseImg.alt = "Pause";
+                        } else {
+                            audioPlayer.pause();
+                            playPauseImg.src = "./img/icon-play.jpg";
+                            playPauseImg.alt = "Play";
+                        }
+                    });
+
+                    audioPlayer.addEventListener("timeupdate", () => {
+                        const currentTime = audioPlayer.currentTime;
+                        const duration = audioPlayer.duration;
+                        seekBar.value = (currentTime / duration) * 100;
+
+                        const minutes = Math.floor(currentTime / 60);
+                        const seconds = Math.floor(currentTime % 60).toString().padStart(2, "0");
+                        timeDisplay.textContent = `${minutes}:${seconds}`;
+                    });
+
+                    seekBar.addEventListener("input", () => {
+                        const duration = audioPlayer.duration;
+                        audioPlayer.currentTime = (seekBar.value / 100) * duration;
+                    });
+
 
                     // Asignar evento de scroll a los nuevos botones .btn-volver
                     contenedor.querySelectorAll(".btn-volver").forEach((btn) => {
@@ -1581,6 +1634,10 @@
             }
         });
 
+    </script>
+
+    <script>
+       
     </script>
 
 </body>

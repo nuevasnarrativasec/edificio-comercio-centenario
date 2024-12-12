@@ -167,7 +167,11 @@ html {
             height: 100vh;
             position: relative;
             width: 100%;
-        }        
+        } 
+        #contenedor-personaje{
+            position: relative;
+            z-index: 20;
+        }      
         .block {
             background-position: center;
             background-size: cover;
@@ -249,7 +253,7 @@ html {
     .box-main-personajes{
         margin-bottom: 50px;
         position: relative;
-        z-index: 10;
+        z-index: 20;
     }
         .box-main-personajes h4{
             font: 32px / 1.2 "Merriweather", serif;
@@ -374,7 +378,7 @@ html {
         .box-presentacion-personaje{
             margin: 0 auto;
             max-width: 360px;
-            text-align: center;
+            text-align: right;
             transform: translate(0, 10%);
             width: 100%;
         }
@@ -382,7 +386,7 @@ html {
                 background-color: #fff;
                 border: 1px solid #c2c2c2;
                 box-sizing: border-box;
-                margin-bottom: 40px;
+                margin-bottom: 10px;
                 position: relative;
             }
                 .box-texto-presentacion-personaje p{
@@ -402,6 +406,10 @@ html {
                     position: absolute;
                     width: 65px;
                 }
+                .box-presentacion-personaje img{
+                    display: block;
+                    margin: 0 auto;
+                }
         #block-personaje-1-1{
             background-image: url('../img/bg-personaje-1-1.jpg');
             opacity: 1; 
@@ -409,7 +417,7 @@ html {
         }
         #block-personaje-1-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-1-3{   
             background-image: url('../img/bg-personaje-1-5.jpg');         
@@ -692,6 +700,83 @@ html {
                         display: block;
                         font-weight: 600;
                     }
+    .audio-button {        
+        background-color: #AB8F2F;
+        border-radius: 32px;
+        color: #fff;      
+        cursor: pointer;
+        display: inline-block;
+        font: .7rem/1.1 "Noto Sans KR", sans-serif;
+        font-weight: 900;
+        letter-spacing: 0px;
+        max-width: 100px;
+        padding: 10px 20px;  
+        text-transform: uppercase;
+        vertical-align: bottom;
+    }
+        .audio-button .icon {
+            
+        }
+            .audio-button .icon img{
+                display: inline-block;
+                max-width: 20px;
+                vertical-align: top;
+            }
+        .audio-button:hover {
+            background-color: #AB8F2F;
+        }
+        span.text{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .custom-controls {
+            align-items: center;
+            display: flex;
+            margin: 20px 0 20px 140px;
+            max-width: 220px;
+            gap: 5px;
+            background: #ab8e2f;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 32px;   
+        }
+        
+        #play-pause-btn {
+            background-color: #ab8e2f;
+            color: #fff;            
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #play-pause-img{
+            height: 18px;
+            width: 15px;
+        }
+        
+        #seek-bar {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #5f501f; 
+            border-radius: 5px; 
+            outline: none;
+            width: 180px;
+        }
+        #seek-bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #fff; 
+            border-radius: 50%; 
+            cursor: pointer;
+        }
+        
+        #time-display {
+            font: 14px/1.3 "Roboto", sans-serif;
+            color: #fff;
+        }
 
 
 @media only screen and (max-width: 640px) {
@@ -715,7 +800,8 @@ html {
             padding: 0 20px;
         }
         .box-parallax h4{
-            font-size: 28px;
+            font-size: 1.5rem;
+            padding: 0 20px;
         }
         .bloque-texto{
             right: 0;
@@ -764,6 +850,13 @@ html {
         object-position: bottom;
         position: relative;
         width: 200%;
+    }
+    .box-historia p{
+        font-size: 1.1rem;
+    }
+    .box-historia-2 img{
+        max-width: 88%;
+        padding: 0 20px;
     }
 
 }
