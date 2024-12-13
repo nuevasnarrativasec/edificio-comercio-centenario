@@ -902,6 +902,12 @@ html {
         max-width: 88%;
         padding: 0 20px;
     }
+    #seek-bar{
+        width: 100%;
+    }
+    .box-presentacion-personaje{
+        transform: translate(0, 5%);
+    }
 
     #block-1{
         background-repeat: no-repeat;
@@ -915,6 +921,45 @@ html {
         background-repeat: no-repeat;
         background-size: 150%;
     }
+    #block-personaje-1-1,
+    #block-personaje-2-1,
+    #block-personaje-3-1,
+    #block-personaje-4-1,
+    #block-personaje-5-1,
+    #block-personaje-6-1,
+    #block-personaje-7-1{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #block-personaje-2-3{
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
+    #block-personaje-4-2 .box-texto-presentacion-personaje p{
+        font-size: 13.5px;
+    }
+    #block-personaje-4-3{
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
+    .box-historia-4 span{
+        font-size: 17px;
+        padding: 0 20px;
+    }
+    #block-personaje-5-1{
+        background-position: -200px top;
+    }
+    #block-personaje-3-3,
+    #block-personaje-5-3,
+    #block-personaje-5-6,
+    #block-personaje-6-3,
+    #block-personaje-7-3{
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
 
 }
 
@@ -922,6 +967,7 @@ html {
 @media only screen and (max-height: 732px) {
 
     #block-personaje-1-1{
+        background-repeat: no-repeat;
         background-size: contain;
     }
 
