@@ -997,7 +997,8 @@ html {
         background-size: 150%;
     }
 
-    img.personaje-grande{
+    .box-parallax .section-personaje img.personaje-grande{
+        bottom: 0;
         left: 50%;
         max-width: 240px;
         transform: translate(-50%, 0);
@@ -1031,7 +1032,7 @@ html {
         margin: 20px 0 20px 250px;
         width: 100%;
     }
-    img.personaje-grande{
+    .section-personaje img.personaje-grande{
         bottom: -150px;
     }
 
