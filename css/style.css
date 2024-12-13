@@ -134,7 +134,7 @@ html {
             max-width: 100px;
             display: block;           
             position: absolute;  
-            right: 40px;          
+            right: 20px;          
             top: 80px;
             z-index: 20;
         }
@@ -438,6 +438,7 @@ html {
                 }
         #block-personaje-1-1{
             background-image: url('../img/bg-personaje-1-1.jpg');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -831,7 +832,8 @@ html {
                 font-size: 1.2rem;
             }
             img.logo-185{
-
+                left: 20px;
+                top: 220px;                
             }
         .box-bajada h3{
             font-size: 22px;
@@ -895,6 +897,15 @@ html {
     .box-historia-2 img{
         max-width: 88%;
         padding: 0 20px;
+    }
+
+}
+
+
+@media only screen and (max-height: 732px) {
+
+    #block-personaje-1-1{
+        background-size: contain;
     }
 
 }
