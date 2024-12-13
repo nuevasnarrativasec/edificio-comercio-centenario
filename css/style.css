@@ -818,6 +818,15 @@ html {
         }
 
 
+
+@media only screen and (max-width: 430px){
+
+    #contenedor-personaje .ctn-avatar h5{
+        text-align: left;
+    }
+
+}
+
 @media only screen and (max-width: 640px) {
 
     .box-main-portada{
