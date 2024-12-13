@@ -922,6 +922,7 @@ html {
     }
     .section-personaje .box-presentacion-personaje{
         transform: translate(0, 5%);
+        top: 0;
     }
 
     #block-1{
@@ -1040,6 +1041,16 @@ html {
     #block-personaje-6-1,
     #block-personaje-7-1{
         background-size: cover;
+    }
+
+}
+
+@media only screen and (max-width: 1920px){
+
+    .box-presentacion-personaje{
+        position: relative;
+        transform: translate(0, -50%);
+        top: 50%;        
     }
 
 }
