@@ -591,7 +591,7 @@ html {
         }
         #block-personaje-5-2{            
             opacity: 0; 
-            z-index: 60;
+            z-index: 80;
         }
         #block-personaje-5-3{   
             background-image: url('../img/bg-personaje-5-3-nuevo.jpg');         
@@ -861,9 +861,12 @@ html {
             font-size: 1.5rem;
             padding: 0 20px;
         }
-        .bloque-texto{
+        .block .bloque-texto{
             max-width: 100%;
             right: 0;
+        }
+        .block .izquierda{
+            left: 0;
         }
         .izquierda{
             left: 0;
@@ -917,7 +920,7 @@ html {
     #seek-bar{
         width: 100%;
     }
-    .box-presentacion-personaje{
+    .section-personaje .box-presentacion-personaje{
         transform: translate(0, 5%);
     }
 
@@ -979,8 +982,17 @@ html {
 @media only screen and (max-height: 732px) {
 
     #block-personaje-1-1{
-        background-repeat: no-repeat;
+        /*background-repeat: no-repeat;*/
         /*background-size: contain;*/
+    }
+    .box-presentacion-personaje{
+        max-width: 475px;
+    }
+    #block-personaje-4-2 .box-presentacion-personaje{
+        max-width: 580px;
+    }
+    .custom-controls{
+        margin: 20px 0 20px 355px;
     }
 
 }
