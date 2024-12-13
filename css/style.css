@@ -100,6 +100,7 @@ html {
         position: fixed;
         top: 50px;
         text-align: left;
+        width: 95%;
     }        
         .box-titular h1{
             color: #AB8F2F;
@@ -134,8 +135,8 @@ html {
             max-width: 100px;
             display: block;           
             position: absolute;  
-            right: 20px;          
-            top: 80px;
+            right: 0;          
+            top: 25px;
             z-index: 20;
         }
                     
@@ -474,6 +475,7 @@ html {
 
         #block-personaje-2-1{
             background-image: url('../img/bg-personaje-2-1.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -512,6 +514,7 @@ html {
 
         #block-personaje-3-1{
             background-image: url('../img/bg-personaje-3-1.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -539,6 +542,7 @@ html {
 
         #block-personaje-4-1{
             background-image: url('../img/bg-personaje-4-1.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -579,6 +583,7 @@ html {
 
         #block-personaje-5-1{
             background-image: url('../img/bg-personaje-5-1-nuevo.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -622,6 +627,7 @@ html {
 
         #block-personaje-6-1{
             background-image: url('../img/bg-personaje-6-1.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -654,6 +660,7 @@ html {
 
         #block-personaje-7-1{
             background-image: url('../img/bg-personaje-7-1.jpg?v2');
+            background-size: contain;
             opacity: 1; 
             z-index: 10;
         }
@@ -832,8 +839,8 @@ html {
                 font-size: 1.2rem;
             }
             img.logo-185{
-                left: 20px;
-                top: 220px;                
+                left: 0;
+                position: relative;       
             }
         .box-bajada h3{
             font-size: 22px;
@@ -851,10 +858,7 @@ html {
         }
         #block-2 img{
             display: none;
-        }
-        #block-5{
-            background-position-x: -600px;
-        }
+        }        
         .box-bloque p,
         .box-main-personajes h4,
         .box-historia p{
@@ -897,6 +901,19 @@ html {
     .box-historia-2 img{
         max-width: 88%;
         padding: 0 20px;
+    }
+
+    #block-1{
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
+    #block-3{
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
+    #block-5{
+        background-repeat: no-repeat;
+        background-size: 150%;
     }
 
 }
