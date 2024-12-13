@@ -406,39 +406,50 @@ html {
                 }
         .box-presentacion-personaje{
             margin: 0 auto;
-            max-width: 360px;
+            max-width: 450px;
             text-align: right;
             transform: translate(0, 10%);
             width: 100%;
         }
-            .box-texto-presentacion-personaje{
-                background-color: #fff;
-                border: 1px solid #c2c2c2;
-                box-sizing: border-box;
-                margin-bottom: 10px;
-                position: relative;
+            .box-content-presentacion-personaje{
+                transform: translate(0%, 10%);
             }
-                .box-texto-presentacion-personaje p{
-                    font: 15px/1.5 "Roboto", sans-serif;
-                    font-weight: 400;
-                    margin: 0 auto;
-                    padding: 30px 20px;
-                    text-align: left;
+                .box-texto-presentacion-personaje{
+                    background-color: #fff;
+                    border: 1px solid #c2c2c2;
+                    box-sizing: border-box;
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    position: relative;
                 }
-                .box-texto-presentacion-personaje::after{
-                    background: url('../img/triangulo.png') no-repeat center top;
-                    background-size: 100%;
-                    bottom: -55px;
-                    content: '';
-                    height: 56px;
-                    left: 0;
-                    position: absolute;
-                    width: 65px;
-                }
-                .box-presentacion-personaje img{
-                    display: block;
-                    margin: 0 auto;
-                }
+                    .box-texto-presentacion-personaje p{
+                        font: 15px/1.5 "Roboto", sans-serif;
+                        font-weight: 400;
+                        margin: 0 auto;
+                        padding: 30px 20px;
+                        text-align: left;
+                    }
+                    .box-texto-presentacion-personaje::after{
+                        background: url('../img/triangulo.png') no-repeat center top;
+                        background-size: 100%;
+                        bottom: -55px;
+                        content: '';
+                        height: 56px;
+                        left: 0;
+                        position: absolute;
+                        width: 65px;
+                    }
+                    .box-presentacion-personaje img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    img.personaje-grande{
+                        bottom: -50px;     
+                        left: 50%;                         
+                        max-width: 340px;
+                        position: absolute;
+                        transform: translate(-50%, 0);              
+                    }
         #block-personaje-1-1{
             background-image: url('../img/bg-personaje-1-1.jpg');
             background-size: contain;
@@ -773,7 +784,7 @@ html {
         .custom-controls {
             align-items: center;
             display: flex;
-            margin: 20px 0 20px 140px;
+            margin: 20px 0 20px 225px;
             max-width: 220px;
             gap: 5px;
             background: #ab8e2f;
@@ -841,7 +852,8 @@ html {
             box-sizing: border-box;
             left: 0;
             padding: 0 20px;
-            width: 100%;            
+            width: 100%;    
+            z-index: 20;        
         }
             .box-titular h1{
                 font-size: 4rem;
@@ -980,6 +992,12 @@ html {
         background-size: 150%;
     }
 
+    img.personaje-grande{
+        left: 50%;
+        max-width: 240px;
+        transform: translate(-50%, 0);
+    }
+
 }
 
 
@@ -998,6 +1016,9 @@ html {
     .custom-controls{
         margin: 20px 0 20px 250px;
         width: 100%;
+    }
+    img.personaje-grande{
+        bottom: -150px;
     }
 
 }
@@ -1051,6 +1072,7 @@ html {
 @media only screen and (max-width: 1920px){
 
     .box-presentacion-personaje{
+        height: 100%;
         position: relative;
         transform: translate(0, -50%);
         top: 50%;        
