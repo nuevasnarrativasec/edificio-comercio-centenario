@@ -278,13 +278,15 @@ html {
                 text-align: center;
             }
     .box-main-personajes{
+        border-top: 1px solid #c2c2c2;
         margin-bottom: 50px;
+        margin-top: 60px;
         position: relative;
-        z-index: 20;
+        z-index: 20;        
     }
         .box-main-personajes h4{
             font: 32px / 1.2 "Merriweather", serif;
-            margin: 20px auto 60px;
+            margin: 40px auto 60px;
             max-width: 500px;
             text-align: center;
             text-transform: uppercase;
@@ -979,6 +981,15 @@ html {
     #block-personaje-1-1{
         background-repeat: no-repeat;
         /*background-size: contain;*/
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    #block-2 img{
+        left: 120px;
     }
 
 }
