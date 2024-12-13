@@ -478,7 +478,7 @@ html {
             z-index: 60;
         }
         #block-personaje-2-3{   
-            background-image: url('../img/bg-personaje-2-3.jpg');         
+            background-image: url('../img/bg-personaje-2-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -574,7 +574,7 @@ html {
         }
 
         #block-personaje-5-1{
-            background-image: url('../img/bg-personaje-5-1.jpg?v2');
+            background-image: url('../img/bg-personaje-5-1-nuevo.jpg?v2');
             opacity: 1; 
             z-index: 10;
         }
@@ -583,7 +583,7 @@ html {
             z-index: 60;
         }
         #block-personaje-5-3{   
-            background-image: url('../img/bg-personaje-5-3.jpg');         
+            background-image: url('../img/bg-personaje-5-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -600,9 +600,14 @@ html {
             transform: translateY(100%);
         }
         #block-personaje-5-6{   
+            background-image: url('../img/bg-personaje-5-6.jpg');         
+            opacity: 0; 
+            z-index: 60;
+        }
+        #block-personaje-5-7{   
             opacity: 1;         
             position: absolute;           
-            z-index: 60;
+            z-index: 70;
             transform: translateY(100%);
         }
         .box-historia-5 img{
@@ -621,7 +626,7 @@ html {
             z-index: 60;
         }
         #block-personaje-6-3{   
-            background-image: url('../img/bg-personaje-6-3.jpg');         
+            background-image: url('../img/bg-personaje-6-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
