@@ -252,7 +252,7 @@ html {
             max-width: 380px;
             padding: 30px;
             position: absolute;
-            right: 20px;   
+            right: 80px;   
             top: 50%;  
             transform: translate(0,-50%);  
         }
@@ -261,7 +261,7 @@ html {
                 margin: 0 auto;
             }
             .izquierda{
-                left: 20px;
+                left: 80px;
                 right: inherit;
             }
     .box-bloque{
