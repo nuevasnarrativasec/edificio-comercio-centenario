@@ -56,7 +56,7 @@ html {
                 width: 36px;
             }
                 #fb {
-                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/fb-icon.png?v2) no-repeat 0 0 !important;
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/abuso-infantil/img/fb-icon-negro.png?v2) no-repeat 0 0 !important;
                     background-size: 100% !important;
                     border: none;
                     display: inline-block;
@@ -65,7 +65,7 @@ html {
                     width: 36px;
                 }
                 #wst {
-                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/wsp-icon.png?v2) no-repeat 0 0 !important;
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/abuso-infantil/img/wsp-icon-negro.png?v2) no-repeat 0 0 !important;
                     background-size: 100% !important;
                     border: none;
                     display: none;
@@ -74,7 +74,7 @@ html {
                     width: 36px;
                 }
                 #tw {
-                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/tw-icon.png?v2) no-repeat 0 0 !important;
+                    background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/abuso-infantil/img/tw-icon-negro.png?v2) no-repeat 0 0 !important;
                     background-size: 100% !important;
                     border: none;
                     display: inline-block;
@@ -126,6 +126,14 @@ html {
             font: 1.8rem/1 "Noto Serif KR", serif;
             font-weight: 900;
             margin: 0 auto;
+        }
+        img.logo-185{
+            max-width: 100px;
+            display: block;           
+            position: absolute;  
+            right: 40px;          
+            top: 80px;
+            z-index: 20;
         }
                     
         .enterTitulo{
