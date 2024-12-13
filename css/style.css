@@ -986,10 +986,47 @@ html {
 }
 
 
+@media only screen and (max-width: 768px){
+
+    .section #block-2 img{
+        left: 10px;
+    }
+    .bloque-texto{
+        right: 40px;
+    }
+    .izquierda{
+        left: 40px;
+    }
+    .box-presentacion-personaje{
+        transform: translate(0, 30%);
+    }
+
+    #block-personaje-2-3,
+    #block-personaje-3-3,
+    #block-personaje-4-3,
+    #block-personaje-5-3,
+    #block-personaje-6-3,
+    #block-personaje-7-3{
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 150%;
+    }
+
+}
+
 @media only screen and (max-width: 1024px){
 
     #block-2 img{
         left: 120px;
+    }
+    #block-personaje-1-1,
+    #block-personaje-2-1,
+    #block-personaje-3-1,
+    #block-personaje-4-1,
+    #block-personaje-5-1,
+    #block-personaje-6-1,
+    #block-personaje-7-1{
+        background-size: cover;
     }
 
 }
