@@ -1094,3 +1094,14 @@ html {
     }
 
 }
+
+@media only screen and (max-width: 2560px){
+
+    .box-presentacion-personaje{
+        height: 100%;
+        position: relative;
+        transform: translate(0, -50%);
+        top: 50%;        
+    }
+
+}
