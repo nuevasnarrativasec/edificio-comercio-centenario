@@ -13,6 +13,11 @@ html {
 }
 
 @font-face {
+    font-family: 'chronicle_displayitalic';
+    src: url('../fonts/chronicledisp-italic-webfont.woff2') format('woff2'),
+         url('../fonts/chronicledisp-italic-webfont.woff') format('woff');
+}
+@font-face {
     font-family: 'chronicle_displaylight_italic';
     src: url('../fonts/chronicledisp-lightital-webfont.woff2') format('woff2'),
          url('../fonts/chronicledisp-lightital-webfont.woff') format('woff');
@@ -94,15 +99,25 @@ html {
         text-align: left;
     }        
         .box-titular h1{
-            font: 3.5rem/1 "Noto Serif KR", serif;
-            font-weight: 900;
+            color: #AB8F2F;
+            font: 6rem/1 'chronicle_displayitalic';
             margin: 10px 0;
-            max-width: 410px;
+            max-width: 480px;
             text-transform: uppercase;
         }
-        .box-titular h5{
+        .box-titular h2{
             color: #AB8F2F;
-            font: 1.3rem/1.1 "Noto Sans KR", sans-serif;
+            font: 1.5rem/1 "Noto Serif KR", serif;
+            margin: 10px 0;
+            max-width: 500px;
+            text-transform: uppercase;
+        }
+            .box-titular h2 span{
+                font-weight: 900;
+            }
+        .box-titular h5{
+            color: #000;
+            font: 1.3rem/1.1 "Noto Serif KR", serif;
             font-weight: 900;
             margin: 0 auto;
             text-transform: uppercase;
