@@ -452,7 +452,7 @@ html {
         }
         #block-personaje-2-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-2-3{   
             background-image: url('../img/bg-personaje-2-3.jpg');         
@@ -490,7 +490,7 @@ html {
         }
         #block-personaje-3-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-3-3{   
             background-image: url('../img/bg-personaje-3-3.jpg');         
@@ -517,7 +517,7 @@ html {
         }
         #block-personaje-4-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-4-3{   
             background-image: url('../img/bg-personaje-4-3.jpg');         
@@ -557,7 +557,7 @@ html {
         }
         #block-personaje-5-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-5-3{   
             background-image: url('../img/bg-personaje-5-3.jpg');         
@@ -595,7 +595,7 @@ html {
         }
         #block-personaje-6-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-6-3{   
             background-image: url('../img/bg-personaje-6-3.jpg');         
@@ -627,7 +627,7 @@ html {
         }
         #block-personaje-7-2{            
             opacity: 0; 
-            z-index: 20;
+            z-index: 60;
         }
         #block-personaje-7-3{   
             background-image: url('../img/bg-personaje-7-3.jpg');         
