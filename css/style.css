@@ -14,18 +14,18 @@ html {
 
 @font-face {
     font-family: 'chronicle_displayitalic';
-    src: url('../fonts/chronicledisp-italic-webfont.woff2') format('woff2'),
-         url('../fonts/chronicledisp-italic-webfont.woff') format('woff');
+    src: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-italic-webfont.woff2') format('woff2'),
+         url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-italic-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'chronicle_displaylight_italic';
-    src: url('../fonts/chronicledisp-lightital-webfont.woff2') format('woff2'),
-         url('../fonts/chronicledisp-lightital-webfont.woff') format('woff');
+    src: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-lightital-webfont.woff2') format('woff2'),
+         url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-lightital-webfont.woff') format('woff');
 }
 @font-face {
     font-family: 'chronicle_displaybold_italic';
-    src: url('../fonts/chronicledisp-boldital-webfont.woff2') format('woff2'),
-         url('../fonts/chronicledisp-boldital-webfont.woff') format('woff');
+    src: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-boldital-webfont.woff2') format('woff2'),
+         url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/fonts/chronicledisp-boldital-webfont.woff') format('woff');
 }
 
 
@@ -231,7 +231,7 @@ html {
                 top: 125px;
             }    
         #block-3 {
-            background-image: url('../img/bg-bloque-2.jpg');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-bloque-2.jpg');
             z-index: 30;
         }
         #block-4 {            
@@ -241,7 +241,7 @@ html {
             transform: translateY(100%);
         }   
         #block-5{
-            background-image: url('../img/bg-bloque-3.webp');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-bloque-3.webp');
             z-index: 50;
         }        
         #block-6 {            
@@ -433,7 +433,7 @@ html {
                         text-align: left;
                     }
                     .box-texto-presentacion-personaje::after{
-                        background: url('../img/triangulo.png') no-repeat center top;
+                        background: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/triangulo.png') no-repeat center top;
                         background-size: 100%;
                         bottom: -55px;
                         content: '';
@@ -454,7 +454,7 @@ html {
                         transform: translate(-50%, 0);              
                     }
         #block-personaje-1-1{
-            background-image: url('../img/bg-personaje-1-1.jpg');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-1-1.jpg');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -464,7 +464,7 @@ html {
             z-index: 60;
         }
         #block-personaje-1-3{   
-            background-image: url('../img/bg-personaje-1-5.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-1-5.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -478,7 +478,7 @@ html {
             transform: translateY(100%);
         }
         #block-personaje-1-5{
-            background-image: url('../img/bg-personaje-1-5.jpg');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-1-5.jpg');
             opacity: 0; 
             z-index: 50;
         }
@@ -490,7 +490,7 @@ html {
         }
 
         #block-personaje-2-1{
-            background-image: url('../img/bg-personaje-2-1.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-2-1.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -500,7 +500,7 @@ html {
             z-index: 60;
         }
         #block-personaje-2-3{   
-            background-image: url('../img/bg-personaje-2-3-nuevo.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-2-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -529,7 +529,7 @@ html {
         }
 
         #block-personaje-3-1{
-            background-image: url('../img/bg-personaje-3-1.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-3-1.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -539,7 +539,7 @@ html {
             z-index: 60;
         }
         #block-personaje-3-3{   
-            background-image: url('../img/bg-personaje-3-3.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-3-3.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -557,7 +557,7 @@ html {
         }
 
         #block-personaje-4-1{
-            background-image: url('../img/bg-personaje-4-1.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-4-1.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -567,7 +567,7 @@ html {
             z-index: 60;
         }
         #block-personaje-4-3{   
-            background-image: url('../img/bg-personaje-4-3.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-4-3.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -598,7 +598,7 @@ html {
         }
 
         #block-personaje-5-1{
-            background-image: url('../img/bg-personaje-5-1-nuevo.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-5-1-nuevo.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -608,7 +608,7 @@ html {
             z-index: 80;
         }
         #block-personaje-5-3{   
-            background-image: url('../img/bg-personaje-5-3-nuevo.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-5-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -625,7 +625,7 @@ html {
             transform: translateY(100%);
         }
         #block-personaje-5-6{   
-            background-image: url('../img/bg-personaje-5-6.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-5-6.jpg');         
             opacity: 0; 
             z-index: 60;
         }
@@ -642,7 +642,7 @@ html {
         }
 
         #block-personaje-6-1{
-            background-image: url('../img/bg-personaje-6-1.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-6-1.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -652,7 +652,7 @@ html {
             z-index: 60;
         }
         #block-personaje-6-3{   
-            background-image: url('../img/bg-personaje-6-3-nuevo.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-6-3-nuevo.jpg');         
             opacity: 0; 
             z-index: 30;
         }
@@ -675,7 +675,7 @@ html {
         }
 
         #block-personaje-7-1{
-            background-image: url('../img/bg-personaje-7-1.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-7-1.jpg?v2');
             background-size: contain;
             opacity: 1; 
             z-index: 10;
@@ -685,7 +685,7 @@ html {
             z-index: 60;
         }
         #block-personaje-7-3{   
-            background-image: url('../img/bg-personaje-7-3.jpg');         
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-7-3.jpg');         
             opacity: 0; 
             z-index: 30;
         }
