@@ -504,6 +504,9 @@ html {
             opacity: 0; 
             z-index: 30;
         }
+            #block-personaje-2-3 video{
+                object-fit: cover;
+            }
         #block-personaje-2-4{   
             opacity: 1;         
             position: absolute;           
@@ -511,15 +514,20 @@ html {
             transform: translateY(100%);
         }
         #block-personaje-2-5{   
-            opacity: 1;         
-            position: absolute;           
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-2-3-nuevo.jpg');         
+            opacity: 0; 
             z-index: 50;
-            transform: translateY(100%);
         }
         #block-personaje-2-6{   
             opacity: 1;         
             position: absolute;           
             z-index: 60;
+            transform: translateY(100%);
+        }
+        #block-personaje-2-7{   
+            opacity: 1;         
+            position: absolute;           
+            z-index: 70;
             transform: translateY(100%);
         }
         .box-historia-2 img{
@@ -974,7 +982,8 @@ html {
         background-repeat: no-repeat;
         background-size: cover;
     }
-    #block-personaje-2-3{
+    #block-personaje-2-3,
+    #block-personaje-2-5{
         background-color: #fff;
         background-repeat: no-repeat;
         background-size: 150%;
