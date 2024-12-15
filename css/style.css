@@ -669,20 +669,28 @@ html {
             z-index: 60;
         }
         #block-personaje-6-3{   
-            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-6-3-nuevo.jpg');         
+                  
             opacity: 0; 
             z-index: 30;
         }
+            #block-personaje-6-3 video{
+                object-fit: cover;
+            }
         #block-personaje-6-4{   
             opacity: 1;         
             position: absolute;           
             z-index: 40;
             transform: translateY(100%);
         }
-        #block-personaje-6-5{   
+        #block-personaje-6-5{     
+            background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-personaje-6-3-nuevo.jpg');          
+            opacity: 0; 
+            z-index: 50;
+        }
+        #block-personaje-6-6{   
             opacity: 1;         
             position: absolute;           
-            z-index: 50;
+            z-index: 60;
             transform: translateY(100%);
         }
         .box-historia-6 img{
@@ -992,7 +1000,9 @@ html {
         background-size: cover;
     }
     #block-personaje-2-3,
-    #block-personaje-2-5{
+    #block-personaje-2-5,
+    #block-personaje-4-5,
+    #block-personaje-6-5{
         background-color: #fff;
         background-repeat: no-repeat;
         background-size: 150%;
