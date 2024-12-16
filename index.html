@@ -1165,6 +1165,7 @@
                     const playPauseImg = document.getElementById("play-pause-img");
                     const seekBar = document.getElementById("seek-bar");
                     const timeDisplay = document.getElementById("time-display");
+                    
 
                     audioButton.addEventListener("click", () => {
                         audioButton.style.display = "none";
@@ -1174,7 +1175,7 @@
 
                     playPauseBtn.addEventListener("click", () => {
                         if (audioPlayer.paused) {
-                            audioPlayer.play();
+                            audioPlayer.play();                            
                             playPauseImg.src = "https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/icon-pause.jpg?v2";
                             playPauseImg.alt = "Pause";
                         } else {
@@ -1220,6 +1221,8 @@
                 }
             }
 
+            
+
             // Funciones ScrollMagic para el Personaje 1
             function initScrollMagicForPersonaje1() {
                 destroyScrollMagic(); // Destruir escenas previas
@@ -1227,6 +1230,15 @@
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
                 const video = document.querySelector("#block-personaje-1-3 video");
+
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
+                
 
                     new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
@@ -1337,6 +1349,14 @@
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
                 const video = document.querySelector("#block-personaje-2-3 video");
+
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
 
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
@@ -1462,6 +1482,14 @@
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
 
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
+
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
                         triggerHook: 0,
@@ -1549,6 +1577,14 @@
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
                 const video = document.querySelector("#block-personaje-4-3 video");
+
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
 
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
@@ -1657,6 +1693,14 @@
             
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
+
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
 
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
@@ -1776,6 +1820,14 @@
                 const controller = window.scrollMagicController;
                 const video = document.querySelector("#block-personaje-6-3 video");
 
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
+
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
                         triggerHook: 0,
@@ -1884,6 +1936,14 @@
                 window.scrollMagicController = new ScrollMagic.Controller();
                 const controller = window.scrollMagicController;
 
+                document.getElementById("audio-button").addEventListener("click", () => {
+                    const audio = document.getElementById("track");
+
+                    if (!audio.paused) {
+                        audio.pause();
+                    }
+                });
+
                 new ScrollMagic.Scene({
                     triggerElement: ".section-personaje",
                         triggerHook: 0,
@@ -1976,6 +2036,7 @@
             controlBtn.className = "play";
         });    
     </script>
+
 
 </body>
 </html>
