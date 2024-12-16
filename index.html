@@ -16,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="https://nuevasnarrativasec.github.io/edificio-comercio-centenario/css/style.css?v33">-->
-    <link rel="stylesheet" href="./css/style.css?v36">
+    <link rel="stylesheet" href="https://nuevasnarrativasec.github.io/edificio-comercio-centenario/css/style.css?v38">
+    <link rel="stylesheet" href="./css/style.css?v38">
 
     <style>        
         .ads__zocalo,
@@ -64,6 +64,13 @@
         <button id="wst" class="sharer button" data-sharer="whatsapp" data-title="El Comercio" data-url="https://elcomercio.pe/lima/casona-historica-el-comercio-recorrido-virtual-especdis-noticia/">Whatsapp</button>
 
         <button id="tw" class="sharer button" data-sharer="twitter" data-title="El Comercio" data-hashtags="" data-via="elcomercio_peru" data-url="https://elcomercio.pe/lima/casona-historica-el-comercio-recorrido-virtual-especdis-noticia/">Twitter</button>
+    </div>
+
+    <audio id="track">
+        <source src="./audio/audio-principal.mp3" type="audio/mpeg">
+    </audio>
+    <div id="player-container">
+        <div id="play-pause" class="play">Play</div>
     </div>
 
     <div class="box-main-portada">
@@ -1944,6 +1951,30 @@
             }
         });
 
+    </script>
+
+    <!-- audio principal -->
+    <script>
+        var track = document.getElementById('track');
+
+            var controlBtn = document.getElementById('play-pause');
+
+            function playPause() {
+                if (track.paused) {
+                    track.play();
+                    //controlBtn.textContent = "Pause";
+                    controlBtn.className = "pause";
+                } else { 
+                    track.pause();
+                    //controlBtn.textContent = "Play";
+                    controlBtn.className = "play";
+                }
+            }
+
+            controlBtn.addEventListener("click", playPause);
+            track.addEventListener("ended", function() {
+            controlBtn.className = "play";
+        });    
     </script>
 
 </body>
